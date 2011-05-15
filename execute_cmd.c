@@ -4946,6 +4946,13 @@ shell_execve (command, args, env)
   char sample[80];
   int sample_len;
 
+
+  larray = strvec_len (args) + 1;
+  printf("About to run command `%s ", command);
+  for (i = 0; i < larray; i++)
+	printf("%s ", args[i]);
+  printf("`\n");
+
   SETOSTYPE (0);		/* Some systems use for USG/POSIX semantics */
   execve (command, args, env);
   i = errno;			/* error from execve() */
