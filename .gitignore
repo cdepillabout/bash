@@ -6,6 +6,7 @@
 /bashversion
 
 *.o
+*.a
 
 config.guess
 config.h
