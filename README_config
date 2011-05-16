@@ -1,0 +1,6 @@
+
+I used this command line to run configure:
+
+LDFLAGS="-Wl,--dynamic-linker=$HOME/filesystem/lib/ld-linux-x86-64.so.2" ./configure \
+	--prefix=$HOME/filesystem --without-bash-malloc  --mandir=$HOME/filesystem/share/man \
+	--infodir=$HOME/filesystem/share/info --without-curses --disable-readline --disable-history
