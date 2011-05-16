@@ -16,7 +16,6 @@ config.sub
 configure
 
 Makefile
-Makefile.in
 
 stamp-*
 
