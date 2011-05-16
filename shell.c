@@ -1054,13 +1054,13 @@ run_startup_files ()
 	 initialization files. */
       if (no_profile == 0)
 	{
-	  maybe_execute_file (SYS_PROFILE, 1);
+	  //maybe_execute_file (SYS_PROFILE, 1);
 
-	  if (act_like_sh)	/* sh */
-	    maybe_execute_file ("~/.profile", 1);
-	  else if ((maybe_execute_file ("~/.bash_profile", 1) == 0) &&
-		   (maybe_execute_file ("~/.bash_login", 1) == 0))	/* bash */
-	    maybe_execute_file ("~/.profile", 1);
+	  //if (act_like_sh)	/* sh */
+	   // maybe_execute_file ("~/.profile", 1);
+	  //else if ((maybe_execute_file ("~/.bash_profile", 1) == 0) &&
+	//	   (maybe_execute_file ("~/.bash_login", 1) == 0))	/* bash */
+	   // maybe_execute_file ("~/.profile", 1);
 	}
 
       sourced_login = 1;
@@ -1092,11 +1092,11 @@ run_startup_files ()
 	    {
 	      maybe_execute_file (SYS_PROFILE, 1);
 
-	      if (act_like_sh)	/* sh */
-		maybe_execute_file ("~/.profile", 1);
-	      else if ((maybe_execute_file ("~/.bash_profile", 1) == 0) &&
-		       (maybe_execute_file ("~/.bash_login", 1) == 0))	/* bash */
-		maybe_execute_file ("~/.profile", 1);
+	      //if (act_like_sh)	/* sh */
+		//maybe_execute_file ("~/.profile", 1);
+	      //else if ((maybe_execute_file ("~/.bash_profile", 1) == 0) &&
+		   //    (maybe_execute_file ("~/.bash_login", 1) == 0))	/* bash */
+		//maybe_execute_file ("~/.profile", 1);
 	    }
 	}
 
@@ -1105,12 +1105,12 @@ run_startup_files ()
 	{
 #ifdef SYS_BASHRC
 #  if defined (__OPENNT)
-	  maybe_execute_file (_prefixInstallPath(SYS_BASHRC, NULL, 0), 1);
+	  //maybe_execute_file (_prefixInstallPath(SYS_BASHRC, NULL, 0), 1);
 #  else
-	  maybe_execute_file (SYS_BASHRC, 1);
+	  //maybe_execute_file (SYS_BASHRC, 1);
 #  endif
 #endif
-	  maybe_execute_file (bashrc_file, 1);
+	  //maybe_execute_file (bashrc_file, 1);
 	}
       /* sh */
       else if (act_like_sh && privileged_mode == 0 && sourced_env++ == 0)
