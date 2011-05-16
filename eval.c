@@ -217,8 +217,8 @@ parse_command ()
   if (interactive && bash_input.type != st_string)
     {
       command_to_execute = get_string_value ("PROMPT_COMMAND");
-      if (command_to_execute)
-	execute_variable_command (command_to_execute, "PROMPT_COMMAND");
+      /*if (command_to_execute)
+	execute_variable_command (command_to_execute, "PROMPT_COMMAND");*/
 
       if (running_under_emacs == 2)
 	send_pwd_to_eterm ();	/* Yuck */

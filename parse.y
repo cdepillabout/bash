@@ -4958,7 +4958,8 @@ prompt_again ()
   if (interactive == 0 || expanding_alias ())	/* XXX */
     return;
 
-  ps1_prompt = get_string_value ("PS1");
+  //ps1_prompt = get_string_value ("PS1");
+  ps1_prompt = "> ";
   ps2_prompt = get_string_value ("PS2");
 
   if (!prompt_string_pointer)
